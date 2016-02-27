@@ -1,1 +1,123 @@
-"Hello World" 
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My Calculator</title>
+		<!-- Latest compiled and minified CSS -->
+		    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<!--JQuery-->
+	</head>
+	<body style="background-color: #ff69b4" background="http://c.fastcompany.net/multisite_files/codesign/imagecache/1280/poster/2013/05/1672696-poster-1280-space-time.jpg">
+		<nav class="navbar navbar-inverse" align="center">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">
+						My Calculator
+					</a>
+				</div>
+			</div>
+		</nav>
+		<div class="input-group" style="width:50%; padding-left: 10%">
+			<span class="input-group-addon" id="basic-addon1">Input Equation</span>
+			<input type="text" id="inputbox" class="form-control" placeholder="" aria-describedby="basic-addon1">
+			<div class="btn-group" role="group" aria-label="...">
+  				
+			</div>
+			
+		</div>
+		<button  onclick="myEvaluate()" type="button" class="btn btn-default"> Evaluate </button>
+		<button  onclick="addPlus()" type="button" class="btn btn-default"> + </button>
+		<button  onclick="addMult()" type="button" class="btn btn-default"> * </button>
+<button  onclick="addDivi()" type="button" class="btn btn-default"> / </button>
+<button  onclick="addSub()" type="button" class="btn btn-default"> - </button>
+<button  onclick="add1()" type="button" class="btn btn-default"> 1 </button>
+<button  onclick="add2()" type="button" class="btn btn-default"> 2 </button>
+<button  onclick="add3()" type="button" class="btn btn-default"> 3 </button>
+<button  onclick="add4()" type="button" class="btn btn-default"> 4 </button>
+<button  onclick="add5()" type="button" class="btn btn-default"> 5 </button>
+<button  onclick="add6()" type="button" class="btn btn-default"> 6 </button>
+<button  onclick="add7()" type="button" class="btn btn-default"> 7 </button>
+<button  onclick="add8()" type="button" class="btn btn-default"> 8 </button>
+<button  onclick="add9()" type="button" class="btn btn-default"> 9 </button>
+<button  onclick="add0()" type="button" class="btn btn-default"> 0 </button>
+<button  onclick="adde()" type="button" class="btn btn-default"> e </button>
+<button  onclick="addPi()" type="button" class="btn btn-default"> &#960 </button>
+<button  onclick="backSpace()" type="button" class="btn btn-default"> Backspace </button>
+  				<div class = "Output" id="Output"></div>
+				<script type="text/javascript">
+				function myEvaluate() {
+				    var eq = document.getElementById("inputbox").value;
+				    eq = eq.replace("pi", "3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679");
+				    eq = eq.replace("plus", "+");
+				    eq = eq.replace("divided by", "/");
+				    eq = eq.replace("multiplied by", "*");
+				    eq = eq.replace("e", "2.718281828");
+				    $("<p>" + eval(eq) +  "</p>").appendTo(document.getElementById("Output"));
+				}
+				function addPlus(){
+					document.getElementById('inputbox').value = document.getElementById("inputbox").value + '+';
+				} 
+				function addMult(){
+					 	document.getElementById('inputbox').value = document.getElementById("inputbox").value + '*';
+				}
+				function addDivi(){
+					document.getElementById('inputbox').value = document.getElementById("inputbox").value + '/';
+			}
+					function addSub(){
+					document.getElementById('inputbox').value = document.getElementById("inputbox").value + '-';
+					}
+					function add1(){
+					document.getElementById('inputbox').value = document.getElementById("inputbox").value + '1';
+			}
+					function add2(){
+					document.getElementById('inputbox').value = document.getElementById("inputbox").value + '2';
+			}
+					function add3(){
+					document.getElementById('inputbox').value = document.getElementById("inputbox").value + '3';
+								}
+					function add4(){
+					document.getElementById('inputbox').value = document.getElementById("inputbox").value + '4';
+			}
+					function add5(){
+					document.getElementById('inputbox').value = document.getElementById("inputbox").value + '5';
+			}
+					function add6(){
+					document.getElementById('inputbox').value = document.getElementById("inputbox").value + '6';
+			}
+					function add7(){
+					document.getElementById('inputbox').value = document.getElementById("inputbox").value + '7';
+								}
+					function add8(){
+					document.getElementById('inputbox').value = document.getElementById("inputbox").value + '8';
+			}
+					function add9(){
+					document.getElementById('inputbox').value = document.getElementById("inputbox").value + '9';
+			}
+					function add0(){
+					document.getElementById('inputbox').value = document.getElementById("inputbox").value + '0';
+								}
+					function adde(){
+					document.getElementById('inputbox').value = document.getElementById("inputbox").value + 'e';
+				}
+				function addPi(){
+					document.getElementById('inputbox').value = document.getElementById("inputbox").value + 'pi';
+				}
+
+				function backSpace(){
+					document.getElementById('inputbox').value = document.getElementById("inputbox").value.substring(0, document.getElementById("inputbox").value.length-1);
+				}
+			</script>
+		<button onclick="clearElement()" type="button" class="btn btn-default">Clear</button>
+		<script type="text/javascript">
+			function clearElement() {
+				$("#Output").html(
+					"");
+			}
+		</script>
+	</body>
+</html>
